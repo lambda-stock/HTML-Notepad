@@ -6,7 +6,7 @@ HTML Notepad is a notepad as Windows's notepad app made with HTML, CSS and JavaS
 
 Download code as zip, extract it and run index.html file.
 
-##Features
+## Features
 
 * Save note textarea's content as a .txt file.
 
