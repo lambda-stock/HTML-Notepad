@@ -3,7 +3,6 @@
 
 <head>
     <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
@@ -14,14 +13,16 @@
     <center>
         <textarea name="note" id="notes" placeholder="Write anything..."></textarea>
         <br>
-        <textarea placeholder="Enter a filename." id="filename"></textarea>
+        <textarea placeholder="Enter a filename. For example: note.txt, note.html etc." id="filename"></textarea>
         <div class="container">
             <div>
                 <button class="material-bubble" onclick="download()">Save Note</button>
             </div>
         </div>
-        <p id="desc">Safe as Tor, can't anyone see your notes.</p>
-        <p id="credits">Made by Lambda.</p>
+        <div class="footer">
+            <a href="https://github.com/yigid-lambda" target="_blank" class="lambda">Made by Lambda</a>
+        </div>
     </center>
 </body>
+
 </html>

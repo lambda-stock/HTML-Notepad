@@ -6,10 +6,12 @@ body {
 }
 
 #notes {
+    box-sizing: border-box;
+    width: 40%;
     font-family: 'Poppins', sans-serif;
     border: 1px solid #000;
     border-radius: 3px;
-    width: 550px;
+    /*width: 550px;*/
     height: 220px;
     background-color: rgb(185, 185, 185);
 }
@@ -19,12 +21,11 @@ h2 {
     color: rgb(230, 230, 230);
 }
 
-button,
+.material-bubble,
 .material-bubble::after,
-.material-bubble::before,
-button::after,
-button::before {
+.material-bubble::before {
     box-sizing: border-box;
+    border-radius: 3px;
 }
 
 .container {
@@ -36,13 +37,13 @@ button::before {
     text-align: center;
 }
 
-button {
+.material-bubble {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
-    cursor: pointer;
+    /*cursor: none;*/
 }
 
-button {
+.material-bubble {
     position: relative;
     border: none;
     font-size: 18px;
@@ -50,25 +51,17 @@ button {
     outline: none;
     border-radius: 3px;
     margin: 0 10px;
-    padding: 23px 33px;
+    padding: 17px 27px;
     border: 3px solid transparent;
-}
-
-button:active {
-    transform: translateY(3px);
-}
-
-button::after,
-button::before {
-    border-radius: 3px;
-}
-
-.material-bubble {
     background-color: transparent;
     color: #e6e6e6;
     border: none;
     overflow: hidden;
     box-shadow: none;
+}
+
+.material-bubble:active {
+    transform: translateY(3px);
 }
 
 .material-bubble:hover {
@@ -116,7 +109,8 @@ button::before {
     margin-top: 10px;
     border: 1px solid #000;
     border-radius: 3px;
-    width: 150px;
+    width: 250px;
+    height: 40px;
     background-color: rgb(185, 185, 185);
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -133,4 +127,23 @@ button::before {
 #credits {
     line-height: 10px;
     color: rgb(230, 230, 230);
+}
+
+.footer {
+    position: fixed;
+    text-align: center;
+    bottom: 2px;
+    right: -1px;
+    width: 100%;
+}
+
+.lambda {
+    color: #e6e6e6;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.lambda:hover {
+    color: rgb(0, 255, 234);
+    transition: 0.5s ease;
 }
