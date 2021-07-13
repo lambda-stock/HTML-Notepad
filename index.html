@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h2>Anonymous Notepad</h2>
+    <center>
+        <textarea name="note" id="notes"></textarea>
+        <br>
+        <textarea placeholder="Enter a filename." id="filename"></textarea>
+        <div class="container">
+            <div>
+                <button class="material-bubble" onclick="download()">Save Note</button>
+            </div>
+        </div>
+        <p id="desc">Safe as Tor, can't anyone see your notes.</p>
+        <p id="credits">Made by Lambda.</p>
+    </center>
+</body>
+<script>
+    function download() {
+        var text = document.getElementById("notes").value;
+        var filename = document.getElementById("filename").value;
+        text = text.replace(/\n/g, "\r\n"); // To retain the Line breaks.
+        var blob = new Blob([text], {
+            type: "text/plain"
+        });
+        var anchor = document.createElement("a");
+        anchor.download = filename + ".txt";
+        anchor.href = window.URL.createObjectURL(blob);
+        anchor.target = "_blank";
+        anchor.style.display = "none"; // just to be safe!
+        document.body.appendChild(anchor);
+        anchor.click();
+        document.body.removeChild(anchor);
+    }
+</script>
+
+</html>

@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: mediumblue;
+}
+
+#notes {
+    border: 1px solid #000;
+    border-radius: 3px;
+    width: 550px;
+    height: 220px;
+    background-color: rgb(185, 185, 185);
+}
+
+h2 {
+    text-align: center;
+    color: rgb(230, 230, 230);
+}
+
+button,
+.material-bubble::after,
+.material-bubble::before,
+button::after,
+button::before {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    width: 300px;
+    text-align: center;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button {
+    position: relative;
+    border: none;
+    font-size: 18px;
+    transition: color 0.5s, transform 0.2s, background-color 0.2s;
+    outline: none;
+    border-radius: 3px;
+    margin: 0 10px;
+    padding: 23px 33px;
+    border: 3px solid transparent;
+}
+
+button:active {
+    transform: translateY(3px);
+}
+
+button::after,
+button::before {
+    border-radius: 3px;
+}
+
+.material-bubble {
+    background-color: transparent;
+    color: #e6e6e6;
+    border: none;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.material-bubble:hover {
+    color: #000000;
+}
+
+.material-bubble::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #e6e6e6;
+    transition: opacity 0.3s, border 0.3s;
+}
+
+.material-bubble:hover::before {
+    opacity: 0;
+}
+
+.material-bubble::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #e6e6e6;
+    border-color: transparent;
+    border-radius: 50%;
+    transform: translate(-10px, -70px) scale(0.1);
+    opacity: 0;
+    z-index: -1;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+
+.material-bubble:hover::after {
+    opacity: 1;
+    transform-origin: 100px 100px;
+    transform: scale(1) translate(-10px, -70px);
+}
+
+#filename {
+    margin-top: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    width: 150px;
+    background-color: rgb(185, 185, 185);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+#filename::placeholder {
+    color: rgb(40, 40, 40);
+}
+
+#desc {
+    color: rgb(230, 230, 230);
+}
+
+#credits {
+    line-height: 10px;
+    color: rgb(230, 230, 230);
+}
